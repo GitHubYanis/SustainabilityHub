@@ -10,6 +10,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+  <script src="aquaponics.js"></script>
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -44,8 +46,15 @@
   <h1>Solutions for a More Sustainable Agro-industry</h1>
 
   <h2>Aquaponics</h2>
-  <img src="simulation_background.png" alt="Image" width="500px">
-  <p style="text-indent: 40px"></p>
+  <canvas id="myCanvas" width="500px" height="575px" style="float: left; margin: 20px;">
+  </canvas> 
+  <div class="btn-group-vertical">
+    <button type="button" class="btn btn-primary" onclick="step1()">Step 1</button>
+    <button type="button" class="btn btn-primary">Step 2</button>
+    <button type="button" class="btn btn-primary">Step 3</button>
+    <button type="button" class="btn btn-primary">Step 4</button>
+  </div>
+  <p style="text-indent: 40px">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet optio soluta iste, aperiam non quae odio error unde, maiores velit animi eius eum iure placeat! Iusto ut reiciendis perferendis praesentium!</p>
 </div>
 
 </body>
