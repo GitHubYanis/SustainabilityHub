@@ -11,6 +11,10 @@ window.onload = function() {
         ctx.drawImage(img, 0, 0);
         displayRest();
     };
+
+    $('.btn').each(function() {
+        $(this).on('click', buttonClick);
+    });
 }
 
 function displayRest() {
@@ -82,8 +86,11 @@ function displayRest() {
 
 }
 
-function step1() {
-    ctx.moveTo(0, 0);
-    ctx.lineTo(200, 100);
-    ctx.stroke();    
+function buttonClick() {
+    if ($(this).hasClass('active')) {
+        $(this).next().animate({'opacity': 0});
+    }
+    else {
+        $(this).next().animate({'opacity': 1});
+    }
 }
