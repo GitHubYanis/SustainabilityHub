@@ -9,8 +9,11 @@ window.onload = function() {
     img.src="simulation_background.png";
     img.onload = function(){       
         ctx.drawImage(img, 0, 0);
+        displayRest();
     };
+}
 
+function displayRest() {
     var fish = new Image();
     fish.src="fishreal.png";
     fish.onload = function(){       
@@ -34,6 +37,49 @@ window.onload = function() {
         ctx.drawImage(fish3, -200, 450);
         ctx.restore();
     };
+
+    var plant = new Image();
+    plant.src="plant.png";
+    plant.onload = function(){ 
+        ctx.save();  
+        ctx.scale(1,1);    
+        ctx.drawImage(plant, 150, 0);  
+        ctx.restore();  
+    };
+
+    var plant3 = new Image();
+    plant3.src="plant.png";
+    plant3.onload = function(){ 
+        ctx.save();  
+        ctx.scale(1,1);    
+        ctx.drawImage(plant3, 210, 5);  
+        ctx.restore();  
+    };
+
+    var plant3 = new Image();
+    plant3.src="plant.png";
+    plant3.onload = function(){ 
+        ctx.drawImage(plant3, 270, 0);  
+    };
+
+    var plant3 = new Image();
+    plant3.src="plant.png";
+    plant3.onload = function(){ 
+        ctx.drawImage(plant3, 330, 8);  
+    };
+
+    var plant3 = new Image();
+    plant3.src="plant.png";
+    plant3.onload = function(){ 
+        ctx.drawImage(plant3, 390, 18);  
+    };
+
+    var plant3 = new Image();
+    plant3.src="plant.png";
+    plant3.onload = function(){ 
+        ctx.drawImage(plant3, 450, 14);  
+    };
+
 }
 
 function step1() {
