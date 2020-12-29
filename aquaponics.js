@@ -1,5 +1,6 @@
 var c;
 var ctx;
+const TIMEOUT = 500;
 
 window.onload = function() {
     c = document.getElementById("myCanvas");
@@ -9,7 +10,6 @@ window.onload = function() {
     img.src="simulation_background.png";
     img.onload = function(){       
         ctx.drawImage(img, 0, 0);
-        displayRest();
     };
 
     $('.btn').each(function() {
@@ -17,7 +17,35 @@ window.onload = function() {
     });
 }
 
-function displayRest() {
+
+function step1() {
+    //StepNumber
+    ctx.font = "30px Arial";
+    ctx.fillStyle = "black";
+    ctx.fillText("(1)", 30, 550);
+
+    //Arrows
+    ctx.font = "50px Arial";
+    ctx.fillText("←", 100, 560);
+
+    for (let i = 0; i < 6; i++) {
+        setTimeout(function() {
+                ctx.font = "50px Arial";
+                ctx.fillText("↑", 27, 480 - i*70);
+            }, TIMEOUT*i);
+    }
+
+    setTimeout(function() {
+        ctx.font = "50px Arial";
+        ctx.fillText("↗", 35, 60);
+    }, TIMEOUT*6);
+
+    setTimeout(function() {
+        ctx.font = "50px Arial";
+        ctx.fillText("→", 82, 39);
+    }, TIMEOUT*7);
+
+    //Fish
     var fish = new Image();
     fish.src="fishreal.png";
     fish.onload = function(){       
@@ -41,7 +69,14 @@ function displayRest() {
         ctx.drawImage(fish3, -200, 450);
         ctx.restore();
     };
+}
+function step2() {
+    //StepNumber
+    ctx.font = "30px Arial";
+    ctx.fillStyle = "white";
+    ctx.fillText("(2)", 100, 100);
 
+    //Plants
     var plant = new Image();
     plant.src="plant.png";
     plant.onload = function(){ 
@@ -83,7 +118,24 @@ function displayRest() {
     plant3.onload = function(){ 
         ctx.drawImage(plant3, 450, 14);  
     };
+}
 
+function step3() {
+    //StepNumber
+    ctx.font = "30px Arial";
+    ctx.fillStyle = "black";
+    ctx.fillText("(3)", 370, 50);
+}
+function step4() {
+    //StepNumber
+    ctx.font = "30px Arial";
+    ctx.fillStyle = "black";
+    ctx.fillText("(4)", 440, 400);
+
+    //Arrows
+    ctx.font = "50px Arial";
+    ctx.fillText("↓", 456, 279);
+    ctx.fillText("↓", 456, 340);
 }
 
 function buttonClick() {
@@ -92,5 +144,22 @@ function buttonClick() {
     }
     else {
         $(this).next().animate({'opacity': 1});
+        switch (this.id) {
+            case 'btn1':
+                step1();
+                break;
+            case 'btn2':
+                step2();
+                break;
+            case 'btn3':
+                step3();
+                break;
+            case 'btn4':
+                step4();
+                break;
+        }
+
+
+
     }
 }

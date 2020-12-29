@@ -41,6 +41,11 @@ h2 {
 
 .step-description {
     opacity: 0;
+    text-indent: 40px
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #3d6a11 !important;
 }
 
 @media (min-width: 768px) {
