@@ -26,22 +26,26 @@ function step1() {
 
     //Arrows
     ctx.font = "50px Arial";
+    ctx.fillStyle = "black";
     ctx.fillText("←", 100, 560);
 
     for (let i = 0; i < 6; i++) {
         setTimeout(function() {
                 ctx.font = "50px Arial";
+                ctx.fillStyle = "black";
                 ctx.fillText("↑", 27, 480 - i*70);
             }, TIMEOUT*i);
     }
 
     setTimeout(function() {
         ctx.font = "50px Arial";
+        ctx.fillStyle = "black";
         ctx.fillText("↗", 35, 60);
     }, TIMEOUT*6);
 
     setTimeout(function() {
         ctx.font = "50px Arial";
+        ctx.fillStyle = "black";
         ctx.fillText("→", 82, 39);
     }, TIMEOUT*7);
 
@@ -134,6 +138,7 @@ function step4() {
 
     //Arrows
     ctx.font = "50px Arial";
+    ctx.fillStyle = "black";
     ctx.fillText("↓", 456, 279);
     ctx.fillText("↓", 456, 340);
 }
@@ -158,8 +163,5 @@ function buttonClick() {
                 step4();
                 break;
         }
-
-
-
     }
 }
