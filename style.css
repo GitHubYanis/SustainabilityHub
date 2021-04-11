@@ -1,12 +1,14 @@
 h1 {
-    color:black;
+    color:#3d6a11;
     font-size: 30px;
-    text-decoration:underline;
+    transform: scaleX(0);
+    transform: scaleY(1);
+    font-weight: 300;
 }
 
 h2 {
     color:black;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .responsive {
@@ -21,6 +23,7 @@ h2 {
 
 .nav-link {
     color:white;
+    font-size: 18px;
 }
 
 .nav-link:hover {
@@ -28,10 +31,18 @@ h2 {
 }
 
 .navbar-brand {
-    padding: 0 15px;
-    height: 70px;
+    padding: 0 1px;
+    height: 80px;
+    font-size: 30px;
+    transform: scaleX(0);
+    transform: scaleY(1);
+    font-weight: 300;
     line-height: 70px;
     color:white;
+}
+
+.navbar-nav {
+    text-align: right;
 }
 
 .navbar-brand:hover {
